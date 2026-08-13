@@ -1,0 +1,1755 @@
+/* =========================================================
+   CHAMBERS LAB
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   FONTS
+   --------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: "1669 Elzevir";
+  src: url("fonts/1669ElzevirW00-Normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ---------------------------------------------------------
+   DESIGN SYSTEM
+   --------------------------------------------------------- */
+
+:root {
+  --field-paper: #f3f0e9;
+  --rule: #c9c1b4;
+  --muted-ink: #5f5a51;
+  --archival-ink: #292722;
+
+  --museum-indigo: #1e3a5f;
+  --pinyon: #4e5841;
+  --oxblood: #7b2e2f;
+
+  --content-width: 1050px;
+  --interior-grid: 922px;
+  --interior-text: 700px;
+  --interior-axis: 190px;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--field-paper);
+  color: var(--archival-ink);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#quarto-header {
+  display: none !important;
+}
+
+#quarto-content,
+main,
+main.content,
+.page-columns {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.page-columns {
+  display: block !important;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   SHARED INTERIOR HEADER
+   ========================================================= */
+
+.interior-header {
+  background-color: var(--rule);
+}
+
+.interior-header-inner {
+  width: calc(100vw - 64px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.interior-logo {
+  display: block;
+  width: 145px;
+  flex-shrink: 0;
+  margin-right: 48px;
+  line-height: 0;
+}
+
+.interior-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.interior-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.interior-nav a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  text-decoration: none;
+}
+
+.interior-nav a:hover,
+.interior-nav a.active {
+  color: var(--field-paper);
+}
+
+
+/* =========================================================
+   SHARED FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 0 0 26px;
+}
+
+.footer-inner {
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--archival-ink);
+  text-decoration: none;
+}
+
+.footer-links a + a {
+  margin-left: 40px;
+}
+
+.footer-links a:hover {
+  color: var(--oxblood);
+}
+
+
+/* =========================================================
+   SHARED LINK COMPONENTS
+   ========================================================= */
+
+a.text-link,
+a.text-link:visited {
+  display: inline-block;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 19px;
+  color: var(--oxblood) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--oxblood);
+  padding-bottom: 2px;
+}
+
+a.text-link:hover {
+  color: var(--pinyon) !important;
+  border-color: var(--pinyon);
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.paper-link,
+.paper-link:visited {
+  display: inline-block;
+  padding: 6px 12px;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 15px;
+  color: var(--muted-ink) !important;
+  background-color: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 1px;
+  text-decoration: none;
+}
+
+.paper-link:hover {
+  color: var(--field-paper) !important;
+  background-color: var(--oxblood) !important;
+  border-color: var(--oxblood) !important;
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+.photo-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 0;
+  min-height: 880px;
+  background-image: url("images/coyote_gulch.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  width: calc(100vw - 60px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  display: block;
+  width: 145px;
+  flex-shrink: 0;
+  margin-right: 38px;
+  line-height: 0;
+}
+
+.header-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 0;
+}
+
+.main-nav a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--field-paper);
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  opacity: 0.7;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 130px;
+}
+
+.hero-mark {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.hero-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--archival-ink);
+  margin-bottom: 3px;
+}
+
+.hero-identity h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  font-weight: 750;
+  line-height: 0.9;
+  margin: 0;
+  color: var(--archival-ink);
+}
+
+.hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 20px !important;
+  line-height: 1.25;
+  margin-top: 6px !important;
+  color: var(--archival-ink);
+  white-space: nowrap;
+}
+
+.hero-rule {
+  width: 84%;
+  height: 3px;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--archival-ink);
+}
+
+.hero-intro {
+  width: 850px !important;
+  max-width: calc(100% - 64px) !important;
+  margin-top: 290px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hero-intro h2 {
+  width: 850px !important;
+  max-width: 100% !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px !important;
+  font-weight: 600;
+  line-height: 1.15 !important;
+  margin-bottom: 28px !important;
+  white-space: nowrap !important;
+  border: none !important;
+  padding-bottom: 0 !important;
+  color: var(--field-paper);
+}
+
+.hero-intro p {
+  width: 850px !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--field-paper);
+}
+
+.opportunities-section {
+  background-color: var(--field-paper);
+  padding-top: 40px;
+}
+
+.content-wrapper {
+  width: 850px !important;
+  max-width: calc(100% - 64px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+.opportunities-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
+.opportunities-section p {
+  width: 850px !important;
+  max-width: 100% !important;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.closing-section {
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.quote-wrapper {
+  width: 700px;
+  max-width: calc(100% - 64px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+blockquote {
+  margin: 0;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--muted-ink);
+}
+
+.quote-attribution {
+  margin-top: 4px;
+  text-align: right;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 17px;
+  color: var(--muted-ink);
+}
+
+
+/* =========================================================
+   RESEARCH PAGE
+   ========================================================= */
+
+.research-page {
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.research-intro {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+.research-page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: var(--interior-axis);
+  margin-bottom: 22px;
+  color: var(--archival-ink);
+}
+
+.research-deck {
+  width: var(--interior-text);
+  max-width: 100%;
+  margin-left: var(--interior-axis);
+  margin-bottom: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--muted-ink);
+}
+
+.field-note {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 700px);
+  column-gap: 16px;
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 110px;
+  align-items: start;
+}
+
+.field-note-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 160px;
+}
+
+.field-note-art img {
+  display: block;
+  max-width: 145px;
+  max-height: 135px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.65;
+}
+
+.field-note-content {
+  min-width: 0;
+}
+
+.field-note-label {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted-ink);
+  margin-bottom: 8px;
+}
+
+.field-note-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: var(--archival-ink);
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
+.field-note-content p {
+  width: 680px;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--archival-ink);
+  margin-bottom: 20px;
+}
+
+.software-section {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding-top: 70px;
+  border-top: 1px solid var(--rule);
+}
+
+.software-intro-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 700px);
+  column-gap: 16px;
+  align-items: start;
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-bottom: 55px;
+}
+
+.software-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 160px;
+}
+
+.software-art img {
+  display: block;
+  max-width: 145px;
+  max-height: 135px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.65;
+}
+
+.software-heading {
+  width: var(--interior-text);
+  max-width: 100%;
+  margin: 0;
+}
+
+.software-label {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted-ink);
+  margin-bottom: 10px;
+}
+
+.software-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--archival-ink);
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
+.software-heading p {
+  width: 680px;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--archival-ink);
+  margin-bottom: 0;
+}
+
+.software-item {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 700px);
+  column-gap: 16px;
+  width: var(--interior-grid);
+  max-width: 100%;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.software-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.software-logo img {
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.software-content {
+  width: 680px;
+  max-width: 100%;
+}
+
+.software-content h3 {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  color: var(--oxblood);
+}
+
+.software-content p {
+  width: 680px;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.software-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.software-links a + a {
+  margin-left: 55px;
+}
+
+.software-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--archival-ink);
+  text-decoration: none;
+}
+
+.software-links a:hover {
+  color: var(--oxblood);
+}
+
+
+/* =========================================================
+   PEOPLE PAGE
+   ========================================================= */
+
+.people-page {
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.people-intro {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+.people-page-title {
+  margin-left: var(--interior-axis);
+  margin-bottom: 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--archival-ink);
+}
+
+.pi-profile,
+.person-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 700px);
+  column-gap: 16px;
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+}
+
+.pi-profile {
+  margin-bottom: 100px;
+}
+
+.person-row {
+  margin-bottom: 65px;
+}
+
+.pi-photo,
+.person-photo {
+  width: 180px;
+  overflow: visible;
+}
+
+.pi-photo img,
+.person-photo img {
+  display: block;
+  width: 250px;
+  max-width: none;
+  height: auto;
+  margin-left: -80px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.pi-content,
+.person-content {
+  width: var(--interior-text);
+  max-width: 100%;
+}
+
+.pi-content h2,
+.person-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  color: var(--archival-ink);
+}
+
+.person-content h3 {
+  margin-top: 0;
+}
+
+.person-role {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-ink);
+  margin-bottom: 15px;
+}
+
+.pi-content p,
+.person-content p {
+  width: 680px;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--archival-ink);
+}
+
+.pi-content p {
+  margin-bottom: 18px;
+}
+
+.person-content p {
+  margin-bottom: 0;
+}
+
+.person-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--archival-ink);
+  text-decoration: none;
+}
+
+.person-links a + a {
+  margin-left: 55px;
+}
+
+.person-links a:hover {
+  color: var(--oxblood);
+}
+
+.people-section,
+.alumni-section {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.people-section {
+  margin-bottom: 100px;
+}
+
+.people-section-label {
+  margin-left: var(--interior-axis);
+  margin-bottom: 34px;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted-ink);
+}
+
+.alumni-grid {
+  width: var(--interior-text);
+  max-width: 100%;
+  margin-left: var(--interior-axis);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 65px;
+  row-gap: 45px;
+}
+
+.alumni-person h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--archival-ink);
+}
+
+.alumni-role,
+.alumni-affiliation {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--archival-ink);
+}
+
+.alumni-photo {
+  margin-bottom: 18px;
+}
+
+.alumni-photo img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES PAGE
+   ========================================================= */
+
+.page-content {
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.page-title {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-left: var(--interior-axis);
+  margin-bottom: 60px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--archival-ink);
+  box-sizing: border-box;
+}
+
+.opportunity-section {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 42px;
+  padding-left: var(--interior-axis);
+  box-sizing: border-box;
+}
+
+.opportunity-section h2 {
+  width: var(--interior-text);
+  max-width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
+.opportunity-section p {
+  width: var(--interior-text);
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0 0 20px;
+}
+
+.opportunity-section .text-link,
+.opportunity-section .text-link:visited {
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--museum-indigo) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--museum-indigo);
+}
+
+.opportunity-section .text-link:hover {
+  color: var(--oxblood) !important;
+  border-color: var(--oxblood);
+}
+
+.opportunity-section-with-photo {
+  position: relative;
+}
+
+/* Large-screen treatment. The photo sits in the left margin
+   without affecting the text flow. */
+.opportunity-photo {
+  position: absolute;
+  right: calc(100% - 50px);
+  top: 10px;
+  width: 400px;
+}
+
+.opportunity-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   PUBLICATIONS PAGE
+   ========================================================= */
+
+.publications-page {
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.publications-heading {
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+}
+
+.publications-heading h1 {
+  margin-left: var(--interior-axis);
+  margin-bottom: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.publications-heading-meta {
+  width: var(--interior-text);
+  max-width: 100%;
+  margin-left: var(--interior-axis);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.publications-heading-meta span {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.publications-list {
+  position: relative;
+  width: var(--interior-grid);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--interior-axis);
+  box-sizing: border-box;
+}
+
+.publications-subheading {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
+.pub-year {
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-top: 42px;
+  margin-bottom: 12px;
+}
+
+.pub-entry {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  padding-left: 24px;
+  text-indent: -24px;
+}
+
+.pub-link {
+  margin-left: 8px;
+  font-family: "1669 Elzevir", Georgia, serif;
+  font-size: 16px;
+  color: var(--museum-indigo);
+  text-decoration: none;
+}
+
+.pub-link:hover {
+  color: var(--oxblood);
+}
+
+/* Large-screen treatment. */
+/* .publications-photo {
+  position: absolute;
+  right: calc(100% - 160px);
+  top: 380px;
+  width: 320px;
+}
+
+.publications-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} */
+
+.publications-side-images {
+  position: absolute;
+
+  right: calc(100% - 160px);
+  top: 100px;
+
+  width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  /* gap: 28px; */
+}
+
+.publications-side-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* object-fit: contain; */
+  margin-bottom: 150px;
+}
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+   This breakpoint is intentionally 1600px: many laptop
+   viewports are wider than 1300px, so the old breakpoint
+   never fired.
+   ========================================================= */
+
+@media (max-width: 1600px) and (min-width: 901px) {
+
+  /* People: keep text axis fixed, shrink the photos. */
+  .pi-photo img,
+  .person-photo img {
+    width: 205px;
+    margin-left: -25px;
+  }
+
+  /* Side photos: keep them in the left margin but make them
+     small enough to fit on a laptop. */
+  .opportunity-photo {
+    width: 240px;
+    right: calc(100% - 120px);
+  }
+
+  /* .publications-photo {
+    width: 250px;
+    right: calc(100% - 150px);
+  } */
+
+  .publications-side-images {
+    width: 240px;
+    right: calc(100% - 150px);
+    gap: 22px;
+  }
+}
+
+/* =========================================================
+   ART PAGE
+   ========================================================= */
+
+.art-grid {
+  width: 100%;
+  max-width: 1800px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+
+  align-items: start;
+}
+
+
+/* ---------------------------------------------------------
+   ART ITEM
+   --------------------------------------------------------- */
+
+.art-item {
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  overflow: hidden;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Keep artwork at its natural proportions */
+
+.art-item img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  /* prevent any inherited hover enlargement */
+  transform: none !important;
+  transition: none !important;
+}
+
+.art-item:hover img {
+  transform: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER OVERLAY
+   --------------------------------------------------------- */
+
+.art-overlay {
+  position: absolute;
+  z-index: 2;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 22px;
+  box-sizing: border-box;
+
+  /* translucent field-paper/white effect */
+  background-color: rgba(243, 240, 233, 0.88);
+
+  color: var(--archival-ink);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+
+  pointer-events: none;
+}
+
+.art-item:hover .art-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ---------------------------------------------------------
+   OVERLAY TYPOGRAPHY
+   --------------------------------------------------------- */
+
+.art-title {
+  font-family: "1669 Elzevir", Georgia, serif;
+
+  font-size: 22px;
+  line-height: 1.1;
+
+  margin-bottom: 5px;
+
+  color: var(--archival-ink);
+}
+
+.art-meta {
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 10px;
+
+  color: var(--muted-ink);
+}
+
+.art-description {
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--archival-ink);
+}
+
+
+/* =========================================================
+   TABLET / NARROW LAPTOP
+   Move side photos into normal flow before they can collide
+   with text. The text axis itself stays unchanged until 700px.
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 701px) {
+
+  .hero-inner,
+  .content-wrapper {
+    width: calc(100% - 64px);
+  }
+
+  .opportunity-section-with-photo {
+    position: static;
+  }
+
+  .opportunity-photo {
+    position: static;
+    width: 240px;
+    margin: 0 0 28px 0;
+  }
+
+  /* .publications-photo {
+    position: static;
+    width: 240px;
+    margin-bottom: 28px;
+  } */
+
+  .publications-side-images {
+    position: static;
+    width: 240px;
+    margin-bottom: 30px;
+  }
+
+  .pi-photo img,
+  .person-photo img {
+    width: 180px;
+    margin-left: 0;
+  }
+
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Shared interior header */
+  .interior-header-inner {
+    width: calc(100% - 44px);
+    align-items: flex-start;
+  }
+
+  .interior-logo {
+    width: 105px;
+    margin-right: 24px;
+  }
+
+  .interior-nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .interior-nav a {
+    font-size: 11px;
+  }
+
+  /* Home navigation */
+  .main-nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    font-size: 11px;
+  }
+
+  /* Home hero */
+  .photo-hero {
+    min-height: 820px;
+    background-position: center 55%;
+  }
+
+  .hero-identity {
+    margin-top: 165px;
+    gap: 22px;
+  }
+
+  .hero-mark {
+    width: 135px;
+  }
+
+  .hero-kicker {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-identity h1 {
+    font-size: 68px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px !important;
+    margin-top: 7px !important;
+  }
+
+  .hero-rule {
+    width: 80%;
+    margin-top: 58px;
+    margin-left: 28px;
+  }
+
+  .hero-intro {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 250px !important;
+  }
+
+  .hero-intro h2 {
+    width: 100% !important;
+    font-size: 25px !important;
+    white-space: normal !important;
+  }
+
+  .hero-intro p {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  .opportunities-section {
+    padding-top: 48px;
+  }
+
+  .opportunities-section h2 {
+    font-size: 26px;
+  }
+
+  .opportunities-section p {
+    font-size: 17px;
+  }
+
+  .closing-section {
+    min-height: 540px;
+  }
+
+  .quote-wrapper {
+    width: calc(100% - 44px);
+  }
+
+  blockquote,
+  .quote-attribution {
+    font-size: 15px;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .footer-links a + a {
+    margin-left: 24px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  /* Research */
+  .research-page {
+    width: calc(100% - 44px);
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .research-intro {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 85px;
+  }
+
+  .research-page-title,
+  .research-deck {
+    margin-left: 0;
+  }
+
+  .research-page-title {
+    font-size: 50px;
+  }
+
+  .research-deck {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .field-note {
+    display: block;
+    width: 100%;
+    margin-bottom: 110px;
+  }
+
+  .field-note-art {
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .field-note-art img {
+    width: 115px;
+  }
+
+  .field-note-content h2 {
+    font-size: 30px;
+  }
+
+  .field-note-content p {
+    font-size: 17px;
+  }
+
+  .software-section {
+    width: 100%;
+  }
+
+  .software-intro-row,
+  .software-item {
+    display: block;
+    width: 100%;
+  }
+
+  .software-art,
+  .software-logo {
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin-bottom: 22px;
+  }
+
+  .software-heading,
+  .software-content {
+    width: 100%;
+  }
+
+  .software-heading h2 {
+    font-size: 32px;
+  }
+
+  .software-heading p,
+  .software-content p {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  /* People */
+  .people-page {
+    width: calc(100% - 44px);
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .people-intro {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 55px;
+  }
+
+  .people-page-title {
+    margin-left: 0;
+    font-size: 50px;
+  }
+
+  .pi-profile,
+  .person-row {
+    display: block;
+    width: 100%;
+  }
+
+  .pi-profile {
+    margin-bottom: 80px;
+  }
+
+  .pi-photo,
+  .person-photo {
+    width: auto;
+    overflow: visible;
+    margin-bottom: 22px;
+  }
+
+  .pi-photo img,
+  .person-photo img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .pi-content,
+  .person-content {
+    width: 100%;
+  }
+
+  .pi-content h2,
+  .person-content h3 {
+    font-size: 29px;
+  }
+
+  .pi-content p,
+  .person-content p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .people-section,
+  .alumni-section {
+    width: 100%;
+  }
+
+  .people-section {
+    margin-bottom: 80px;
+  }
+
+  .people-section-label,
+  .alumni-section .people-section-label {
+    margin-left: 0;
+  }
+
+  .alumni-grid {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+
+  /* Opportunities */
+  .page-content {
+    width: calc(100% - 44px);
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .page-title,
+  .opportunity-section {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .page-title {
+    padding-top: 0;
+    font-size: 50px;
+  }
+
+  .opportunity-section h2,
+  .opportunity-section p {
+    width: 100%;
+  }
+
+  .opportunity-section-with-photo {
+    position: static;
+  }
+
+  .opportunity-photo {
+    position: static;
+    width: min(100%, 320px);
+    margin-bottom: 28px;
+  }
+
+  /* Publications */
+  .publications-page {
+    width: calc(100% - 44px);
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .publications-heading,
+  .publications-list {
+    width: 100%;
+  }
+
+  .publications-heading h1,
+  .publications-heading-meta {
+    margin-left: 0;
+  }
+
+  .publications-heading h1 {
+    font-size: 50px;
+  }
+
+  .publications-heading-meta {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .publications-list {
+    padding-left: 0;
+  }
+
+  .publications-photo {
+    position: static;
+    width: min(100%, 320px);
+    margin-bottom: 28px;
+  }
+
+  .pub-entry {
+    font-size: 16px;
+  }
+
+  /* Art */
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .art-overlay {
+    position: static;
+    opacity: 1;
+    background: transparent;
+    color: var(--archival-ink);
+    padding: 10px 0 22px;
+  }
+}
