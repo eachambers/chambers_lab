@@ -1,0 +1,172 @@
+---
+page-layout: full
+title-block-style: none
+---
+
+<header class="interior-header">
+<div class="interior-header-inner">
+
+<a class="interior-logo" href="index.html">
+<img src="images/chambers_logo.svg" alt="Chambers Lab">
+</a>
+
+<nav class="interior-nav">
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a class="active" href="people.html">People</a>
+<a href="opportunities.html">Opportunities</a>
+<a href="art.html">Art</a>
+</nav>
+
+</div>
+</header>
+
+
+<main class="people-page">
+
+<section class="people-intro">
+
+<div class="people-page-title">People</div>
+
+</section>
+
+
+<section class="pi-profile">
+
+<div class="pi-photo">
+<img src="images/people/anne_portrait.JPG" alt="E. Anne Chambers">
+</div>
+
+<div class="pi-content">
+
+<h2>E. Anne Chambers</h2>
+
+<div class="person-role">Principal Investigator</div>
+
+<p>
+Dr. Chambers received her BSc and MSc from the University of Guelph, her PhD at the University of Texas at Austin, and did her postdoctoral work at the University of California, Berkeley. She's an Assistant Professor in the Department of Biological Sciences and the Curator of NAU's Vertebrate Collection.
+</p>
+
+<div class="person-links">
+<a href="mailto:anne.chambers@nau.edu">Email</a>
+<a href="https://scholar.google.com/citations?user=WmEPfsMAAAAJ&hl=en">Google Scholar</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="people-section">
+
+<div class="people-section-label">Current Lab Members</div>
+
+<div class="person-row">
+
+<div class="person-photo">
+<img src="images/people/abbie.png" alt="Abbie Brozich">
+</div>
+
+<div class="person-content">
+
+<h3>Abbie Brozich</h3>
+
+<div class="person-role">Undergraduate Researcher</div>
+
+<p>
+Abbie is interested in...
+</p>
+
+</div>
+
+</div>
+
+
+<div class="person-row">
+
+<div class="person-photo">
+<img src="images/people/josiah.png" alt="Josiah Hankens">
+</div>
+
+<div class="person-content">
+
+<h3>Josiah Hankens</h3>
+
+<div class="person-role">Undergraduate researcher · NAU Vertebrate Collection</div>
+
+<p>
+Josiah is interested in...
+</p>
+
+</div>
+
+</div>
+
+<div class="person-row">
+
+<div class="person-photo">
+<img src="images/people/bird1_clear.png" alt="Horace the Oryx">
+</div>
+
+<div class="person-content">
+
+<h3>Horace the Oryx</h3>
+
+<div class="person-role">Emotional support taxidermy</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="alumni-section">
+
+<div class="people-section-label">Lab Alumni</div>
+
+<div class="alumni-grid">
+
+<div class="alumni-person">
+
+<div class="alumni-photo">
+<img src="images/people/katie5_clear.png" alt="Katie Stowers">
+</div>
+
+<h3>Katie Stowers</h3>
+<div class="alumni-role">Collections Manager (year-year)</div>
+<div class="alumni-affiliation">NAU Vertebrate Collection</div>
+
+</div>
+
+
+<div class="alumni-person">
+
+<div class="alumni-photo">
+<img src="images/people/nat_isopod.png" alt="Nat Harris">
+</div>
+
+<h3>Nat Harris</h3>
+<div class="alumni-role">Undergraduate Volunteer (year-year)</div>
+<div class="alumni-affiliation">NAU Vertebrate Collection</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+<div class="footer-inner">
+
+<div class="footer-links">
+<a href="https://github.com/eachambers">GitHub</a>
+<a href="https://scholar.google.com/citations?user=WmEPfsMAAAAJ&hl=en">Google Scholar</a>
+<a href="https://bsky.app/profile/chamberea.bsky.social">Bluesky</a>
+</div>
+
+</div>
+</footer>

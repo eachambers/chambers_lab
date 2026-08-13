@@ -1,0 +1,81 @@
+---
+page-layout: full
+title-block-style: none
+---
+
+<section class="photo-hero">
+<div class="hero-inner">
+
+<div class="top-nav">
+<a class="header-logo" href="index.html">
+<img src="images/chambers_logo_light.svg" alt="Chambers Lab">
+</a>
+
+<nav class="main-nav">
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="people.html">People</a>
+<a href="opportunities.html">Opportunities</a>
+<a href="art.html">Art</a>
+</nav>
+</div>
+
+<div class="hero-identity">
+<img class="hero-mark" src="images/chambers_mark.svg" alt="">
+<div class="hero-title-group">
+<div class="hero-kicker">Northern Arizona University</div>
+<h1>Chambers Lab</h1>
+<div class="hero-subtitle">Evolutionary &amp; Conservation Genomics</div>
+</div>
+</div>
+
+<div class="hero-rule"></div>
+
+<div class="hero-intro">
+<h2>From genomes to landscapes, we study the forces that shape biodiversity.</h2>
+<p>The Chambers Lab combines genomic, phylogenetic, and spatial approaches to investigate the processes that generate and maintain biodiversity. Our work spans geographically widespread systems, with a particular focus on North American vertebrates and conservation-relevant questions.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="opportunities-section">
+<div class="content-wrapper">
+
+<h2>Join the Chambers Lab!</h2>
+
+<p>We are currently recruiting PhD students interested in evolutionary and conservation genomics. Learn more about current projects, graduate opportunities, and how to get in touch.</p>
+
+<a class="text-link" href="opportunities.html">Explore opportunities</a>
+
+</div>
+</section>
+
+
+<section class="closing-section">
+<div class="quote-wrapper">
+
+<blockquote>
+“I thought of the long ages of the past, during which the successive generations of this little creature had run their course – year by year being born, and living and dying amid these dark and gloomy woods, with no intelligent eye to gaze upon their loveliness ... Their happiness and enjoyments, their loves and hates, their struggles for existence, their vigorous life and early death, would seem to be immediately related to their own well-being and perpetuation alone.”
+</blockquote>
+
+<div class="quote-attribution">
+— Alfred Russel Wallace, <em>The Malay Archipelago</em> (1869)
+</div>
+
+</div>
+</section>
+
+
+<footer class="site-footer">
+<div class="footer-inner">
+
+<div class="footer-links">
+<a href="https://github.com/eachambers">GitHub</a>
+<a href="https://scholar.google.com/citations?user=WmEPfsMAAAAJ&hl=en">Google Scholar</a>
+<a href="https://bsky.app/profile/chamberea.bsky.social">Bluesky</a>
+</div>
+
+</div>
+</footer>

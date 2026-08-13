@@ -1,0 +1,11 @@
+project:
+  type: website
+
+website:
+  title: "Chambers Lab"
+  favicon: images/chambers_micromark.svg
+
+format:
+  html:
+    css: styles.css
+    toc: false

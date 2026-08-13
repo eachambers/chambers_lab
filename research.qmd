@@ -1,0 +1,192 @@
+---
+page-layout: full
+title-block-style: none
+---
+
+<header class="interior-header">
+<div class="interior-header-inner">
+
+<a class="interior-logo" href="index.html">
+<img src="images/chambers_logo.svg" alt="Chambers Lab">
+</a>
+
+<nav class="interior-nav">
+<a class="active" href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="people.html">People</a>
+<a href="opportunities.html">Opportunities</a>
+<a href="art.html">Art</a>
+</nav>
+
+</div>
+</header>
+
+
+<main class="research-page">
+
+<section class="research-intro">
+
+<div class="research-page-title">Research</div>
+
+</section>
+
+
+<section class="field-note">
+
+<div class="field-note-art">
+<img src="images/research/phylo_icon.svg" alt="">
+</div>
+
+<div class="field-note-content">
+
+<div class="field-note-label">Field Note 01.</div>
+
+<h2>How do we recognize species in a continuum of variation?</h2>
+
+<p>
+Species form along a continuum, making the boundary between variation within species and divergence among species surprisingly difficult to define. We study how genomic data and model-based approaches can help us understand and delimit species, with a particular emphasis on contact zones: places where divergent lineages meet, exchange genes, and provide natural tests of species boundaries.
+</p>
+
+<div class="paper-links">
+<a href="https://doi.org/10.1073/pnas.2423688122" class="paper-link">Chambers et al. (2025)</a>
+<a href="https://doi.org/10.1093/sysbio/syac056" class="paper-link">Chambers et al. (2023)</a>
+<a href="https://doi.org/10.1093/sysbio/syz042" class="paper-link">Chambers &amp; Hillis (2020)</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="field-note">
+
+<div class="field-note-art">
+<img src="images/research/topo_icon.svg" alt="">
+</div>
+
+<div class="field-note-content">
+
+<div class="field-note-label">Field Note 02.</div>
+
+<h2>How can we conserve biodiversity in a rapidly changing world?</h2>
+
+<p>
+Genetic variation shapes the capacity of populations to respond to environmental change, but both adaptive variation and evolutionary potential are unevenly distributed across landscapes. We combine large-scale genomic datasets with environmental and spatial information to understand where genetic diversity occurs, how populations are connected, and how well they may be able to respond to future change. Ultimately, we aim to translate these patterns into conservation strategies that preserve both current biodiversity and its capacity to adapt.
+</p>
+
+<div class="paper-links">
+<a href="https://doi.org/10.1111/1755-0998.13884" class="paper-link">Chambers et al. (2025)</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="field-note">
+
+<div class="field-note-art">
+<img src="images/research/specimen_icon.svg" alt="">
+</div>
+
+<div class="field-note-content">
+
+<div class="field-note-label">Field Note 03.</div>
+
+<h2>What can the past tell us about biodiversity today?</h2>
+
+<p>
+Natural history collections preserve biological information across places and through time, allowing us to ask questions that were unimaginable when many specimens were first collected. We curate the NAU Vertebrate Collection as both a record of biodiversity and an active resource for modern research, teaching, and community engagement, while working to ensure that specimens collected today remain available to answer the questions of the future.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="software-section">
+
+<div class="software-intro-row">
+
+<div class="software-art">
+<img src="images/research/key_icon.svg" alt="">
+</div>
+
+<div class="software-heading">
+
+<div class="software-label">Tools &amp; Software</div>
+
+<h2>New questions require new tools.</h2>
+
+<p>
+Answering complex questions about biodiversity often requires developing new analytical approaches. We build open-source software and computational tools for analyzing genomic and spatial data, with an emphasis on making methods accessible, reproducible, and useful to the broader research and conservation communities.
+</p>
+
+</div>
+</div>
+
+<div class="software-item">
+
+<div class="software-logo">
+<img src="images/research/algatr_logo.svg" alt="algatr logo">
+</div>
+
+<div class="software-content">
+
+<h3>algatr.</h3>
+
+<p>
+An R package providing streamlined workflows for landscape genomic analyses.
+</p>
+
+<div class="software-links">
+<a href="https://doi.org/10.1111/1755-0998.13884">Documentation</a>
+<a href="https://github.com/TheWangLab/algatr">GitHub</a>
+<a href="https://github.com/TheWangLab/algatr_workshop">Workshop</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="software-item">
+
+<div class="software-logo">
+<img src="images/research/wingen_logo.svg" alt="wingen logo">
+</div>
+
+<div class="software-content">
+
+<h3>wingen.</h3>
+
+<p>
+An R package for mapping genetic diversity using moving windows.
+</p>
+
+<div class="software-links">
+<a href="http://doi.org/10.1111/2041-210X.14090">Documentation</a>
+<a href="https://github.com/AnushaPB/wingen">GitHub</a>
+<a href="https://cran.r-project.org/web/packages/wingen/index.html">CRAN</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+<div class="footer-inner">
+
+<div class="footer-links">
+<a href="https://github.com/eachambers">GitHub</a>
+<a href="https://scholar.google.com/citations?user=WmEPfsMAAAAJ&hl=en">Google Scholar</a>
+<a href="https://bsky.app/profile/chamberea.bsky.social">Bluesky</a>
+</div>
+
+</div>
+</footer>
