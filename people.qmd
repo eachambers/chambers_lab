@@ -134,7 +134,7 @@ Josiah is interested in...
 </div>
 
 <h3>Katie Stowers</h3>
-<div class="alumni-role">Collections Manager (year-year)</div>
+<div class="alumni-role">Collections Manager</div>
 <div class="alumni-affiliation">NAU Vertebrate Collection</div>
 
 </div>
@@ -147,7 +147,7 @@ Josiah is interested in...
 </div>
 
 <h3>Nat Harris</h3>
-<div class="alumni-role">Undergraduate Volunteer (year-year)</div>
+<div class="alumni-role">Undergraduate Volunteer</div>
 <div class="alumni-affiliation">NAU Vertebrate Collection</div>
 
 </div>
