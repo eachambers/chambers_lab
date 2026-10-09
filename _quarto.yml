@@ -10,3 +10,6 @@ format:
   html:
     css: styles.css
     toc: false
+
+resources:
+  - CNAME
