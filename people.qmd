@@ -64,7 +64,7 @@ Dr. Chambers received her BSc and MSc from the University of Guelph, her PhD at 
 <div class="person-row">
 
 <div class="person-photo">
-<img src="images/people/abbie.png" alt="Abbie Brozich">
+<img src="images/people/scary_abbie.png" alt="Abbie Brozich">
 </div>
 
 <div class="person-content">
@@ -85,6 +85,26 @@ Abbie is interested in...
 <div class="person-row">
 
 <div class="person-photo">
+<img src="images/people/kamryn.png" alt="Kamryn Crider">
+</div>
+
+<div class="person-content">
+
+<h3>Kamryn Crider</h3>
+
+<div class="person-role">Undergraduate Researcher</div>
+
+<p>
+Kamryn is interested in...
+</p>
+
+</div>
+
+</div>
+
+<div class="person-row">
+
+<div class="person-photo">
 <img src="images/people/josiah.png" alt="Josiah Hankens">
 </div>
 
@@ -96,6 +116,26 @@ Abbie is interested in...
 
 <p>
 Josiah is interested in...
+</p>
+
+</div>
+
+</div>
+
+<div class="person-row">
+
+<div class="person-photo">
+<img src="images/people/kaden.png" alt="Kaden O'Sullivan">
+</div>
+
+<div class="person-content">
+
+<h3>Kaden O'Sullivan</h3>
+
+<div class="person-role">Undergraduate researcher</div>
+
+<p>
+Kaden is interested in...
 </p>
 
 </div>
@@ -143,7 +183,7 @@ Josiah is interested in...
 <div class="alumni-person">
 
 <div class="alumni-photo">
-<img src="images/people/nat_isopod.png" alt="Nat Harris">
+<img src="images/people/nat.png" alt="Nat Harris">
 </div>
 
 <h3>Nat Harris</h3>
