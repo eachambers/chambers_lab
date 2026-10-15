@@ -85,7 +85,7 @@ Abbie is interested in...
 <div class="person-row">
 
 <div class="person-photo">
-<img src="images/people/kamryn.png" alt="Kamryn Crider">
+<img src="images/people/scary_kamryn.png" alt="Kamryn Crider">
 </div>
 
 <div class="person-content">
