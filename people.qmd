@@ -105,7 +105,7 @@ Kamryn is interested in...
 <div class="person-row">
 
 <div class="person-photo">
-<img src="images/people/josiah.png" alt="Josiah Hankens">
+<img src="images/people/josiah_hankins.jpeg" alt="Josiah Hankens">
 </div>
 
 <div class="person-content">
@@ -125,7 +125,7 @@ Josiah is interested in...
 <div class="person-row">
 
 <div class="person-photo">
-<img src="images/people/kaden.png" alt="Kaden O'Sullivan">
+<img src="images/people/kaden_osullivan.jpeg" alt="Kaden O'Sullivan">
 </div>
 
 <div class="person-content">
@@ -135,7 +135,7 @@ Josiah is interested in...
 <div class="person-role">Undergraduate researcher</div>
 
 <p>
-Kaden is interested in...
+Kaden is a 3rd year undergraduate studying Biology. He is currently researching a population of salamanders (<em>Ensatina eschscholtzii klauberi</em>) that was introduced to Payson, AZ. He is comparing the genetics of the introduced population to the source population, which is from the Palomar mountains in California. Outside of the lab, he enjoys dog training, outdoor activities, and board games.
 </p>
 
 </div>
